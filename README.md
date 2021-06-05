@@ -14,6 +14,7 @@
 * Gradle
 
 ## Функциональность REST API
+
 1. /all - показывает список всех городов
 ![image](Screen/all.png)
 
