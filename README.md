@@ -14,13 +14,17 @@
 * Gradle
 
 ## Функциональность REST API
+
 1. /all - показывает список всех городов
+
 ![image](Screen/all.png)
 
 2./get/{id} - показывает город по его id
+
 ![image](Screen/get.png)
 
 3./hottest - показывает город с самой тёплой температурой
+
 ![image](Screen/hottest.png)
 
 4./greaterThan/{temp} - показывает города, где температура выше чем заданное значение
