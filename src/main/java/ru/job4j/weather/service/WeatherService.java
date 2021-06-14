@@ -29,11 +29,14 @@ public class WeatherService {
     }
 
     public Mono<Weather> findHottest() {
-        final  int max = weathers.values().stream().mapToInt(Weather::getTemperature).max().getAsInt();
-        return Mono.justOrEmpty(weathers.values().stream().filter(weather -> weather.getTemperature() == max).findFirst().get());
+        final  int max = weathers.values().stream().mapToInt(Weather::getTemperature)
+                .max().getAsInt();
+        return Mono.justOrEmpty(weathers.values().stream().
+                filter(weather -> weather.getTemperature() == max).findFirst().get());
     }
 
     public Flux<Weather> findGreaterThan(int val) {
-        return Flux.fromStream(weathers.values().stream().filter(weather -> weather.getTemperature() > val));
+        return Flux.fromStream(weathers.values().stream()
+                .filter(weather -> weather.getTemperature() > val));
     }
 }
